@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotos",
+  "info": {
+    "singularName": "foto",
+    "pluralName": "fotos",
+    "displayName": "foto"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "comentarios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comentario.comentario",
+      "mappedBy": "foto"
+    },
+    "foto": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::busqueda.busqueda",
+      "inversedBy": "buscar"
+    }
+  }
+}

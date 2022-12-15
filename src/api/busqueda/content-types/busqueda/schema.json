@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "busquedas",
+  "info": {
+    "singularName": "busqueda",
+    "pluralName": "busquedas",
+    "displayName": "buscar",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "buscar": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::foto.foto",
+      "mappedBy": "foto"
+    }
+  }
+}
