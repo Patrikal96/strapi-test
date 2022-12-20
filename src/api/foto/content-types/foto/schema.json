@@ -4,23 +4,14 @@
   "info": {
     "singularName": "foto",
     "pluralName": "fotos",
-    "displayName": "foto"
+    "displayName": "foto",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "imagen": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
     "descripcion": {
       "type": "text"
     },
@@ -31,10 +22,7 @@
       "mappedBy": "foto"
     },
     "foto": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::busqueda.busqueda",
-      "inversedBy": "buscar"
+      "type": "string"
     }
   }
 }
